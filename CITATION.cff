@@ -6,7 +6,7 @@ version: "1.0.0"
 date-released: "2026-10-13"
 license: MIT
 repository-code: "https://github.com/kangMann/lora-vs-fullft-sbert"   # TODO: replace GITHUB_USERNAME
-# doi: "10.5281/zenodo.XXXXXXX"                                               # TODO: fill in after the Zenodo release
+doi: "10.5281/zenodo.23359073"                                               # TODO: fill in after the Zenodo release
 authors:
   - family-names: Fitriyandhi
     given-names: Ari
