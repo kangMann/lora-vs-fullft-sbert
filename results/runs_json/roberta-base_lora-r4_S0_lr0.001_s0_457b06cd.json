@@ -1,0 +1,66 @@
+{
+  "run_id": "roberta-base_lora-r4_S0_lr0.001_s0_457b06cd",
+  "stage": "bench",
+  "config": {
+    "model_name": "roberta-base",
+    "method": "lora",
+    "rank": 4,
+    "strategy": "S0",
+    "lr": 0.001,
+    "seed": 0,
+    "epochs": 1,
+    "batch_size": 32,
+    "max_len": 128,
+    "warmup_ratio": 0.1,
+    "weight_decay": 0.01,
+    "llrd_decay": 0.9,
+    "lora_dropout": 0.1,
+    "cosent_scale": 20.0,
+    "train_data": "stsb_en",
+    "rslora": false,
+    "lora_targets": "all-linear"
+  },
+  "best_epoch": 1,
+  "val_spearman": 0.8693497740727633,
+  "val_pearson": 0.869834958168551,
+  "diverged": false,
+  "history": [
+    {
+      "epoch": 1,
+      "loss": 0.05289305246228145,
+      "epoch_seconds": 30.778985500335693,
+      "samples_per_s": 186.78328432681116,
+      "val_spearman": 0.8693497740727633,
+      "val_pearson": 0.869834958168551
+    }
+  ],
+  "trainable_params": 663552,
+  "total_params": 124718592,
+  "peak_gpu_mem_mb": 2855.73974609375,
+  "peak_gpu_mem_reserved_mb": 7336.0,
+  "train_seconds": 30.778985500335693,
+  "wall_seconds": 32.012736320495605,
+  "samples_per_s": 186.78328432681116,
+  "checkpoint_mb": 2.5806570053100586,
+  "precision": "bf16",
+  "resources": {
+    "wall_seconds": 32.012736320495605,
+    "n_samples": 7,
+    "n_sessions": 1,
+    "gpu_util_mean": 25.778804550028873,
+    "gpu_util_max": 33,
+    "power_mean_w": 52.274583446847416,
+    "power_max_w": 57.011,
+    "energy_wh": 0.46484790448546404,
+    "temp_max_c": 76,
+    "gpu_mem_used_peak_mb": 8056.875,
+    "proc_ram_peak_mb": 4296.23046875,
+    "sys_ram_used_peak_mb": 7333.109375
+  },
+  "env": {
+    "torch": "2.11.0+cu130",
+    "transformers": "5.19.0",
+    "peft": "0.21.2",
+    "gpu": "NVIDIA L4"
+  }
+}

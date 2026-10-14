@@ -1,0 +1,12 @@
+{
+  "roberta-base|full|0": 5e-05,
+  "roberta-base|lora|4": 0.001,
+  "roberta-base|lora|8": 0.0005,
+  "roberta-base|lora|16": 0.0005,
+  "roberta-base|lora|32": 0.0002,
+  "xlm-roberta-base|full|0": 5e-05,
+  "xlm-roberta-base|lora|4": 0.001,
+  "xlm-roberta-base|lora|8": 0.0005,
+  "xlm-roberta-base|lora|16": 0.0005,
+  "xlm-roberta-base|lora|32": 0.0002
+}

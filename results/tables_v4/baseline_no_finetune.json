@@ -1,0 +1,10 @@
+{
+  "xlm-roberta-base|test_en": 0.40679870479094943,
+  "xlm-roberta-base|sr_en_test": 0.6016548076065822,
+  "xlm-roberta-base|test_id": 0.4874913755445516,
+  "xlm-roberta-base|sr_id_test": 0.4666304422379917,
+  "roberta-base|test_en": 0.5434784440232,
+  "roberta-base|sr_en_test": 0.6850698620003898,
+  "roberta-base|test_id": 0.3863004964382674,
+  "roberta-base|sr_id_test": 0.47535661619723785
+}

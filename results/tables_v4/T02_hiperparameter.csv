@@ -1,0 +1,14 @@
+parameter,nilai
+Model,"xlm-roberta-base (277,45 jt param.), roberta-base (124,06 jt param.)"
+Arsitektur,SBERT: encoder siamese + mean pooling + kosinus
+LoRA,"r ∈ {4, 8, 16, 32}; α = 2r (α/r = 2); dropout 0,1; target all-linear; bias none"
+Strategi,"S0 MSE-kosinus; S1 S0 + LLRD 0,9; S2 CoSENT (λ = 20)"
+Optimizer,"AdamW (β = 0,9/0,999; wd 0,01); clipping 1,0; scheduler linear + warmup 10 %"
+Epoch / batch / max_len,4 / 32 / 128
+LR grid Full,"[1e-05, 2e-05, 3e-05, 5e-05]"
+LR grid LoRA (per rank),"{4: [5e-05, 0.0001, 0.0002, 0.0003, 0.0005, 0.001, 0.002], 8: [5e-05, 0.0001, 0.0002, 0.0003, 0.0005, 0.001, 0.002], 16: [5e-05, 0.0001, 0.0002, 0.0003, 0.0005, 0.001], 32: [5e-05, 0.0001, 0.0002, 0.0003, 0.0005, 0.001]}"
+Uji stabilitas LR,"seed [43, 44] (tidak dipakai untuk hasil)"
+Seed,"pencarian/screening 42; konfirmasi [1, 2, 3, 4, 5]; tambahan [6, 7, 8, 9, 10]; ablasi [1, 2, 3]"
+Kriteria collapse,"Spearman validasi terbaik < 0.5 atau jatuh > 0,10 dari puncak ke epoch terakhir"
+Statistik,TOST δ = 0.01; α = 0.05; Holm per famili; bootstrap 2000/10000
+GPU / presisi,NVIDIA L4 / bf16

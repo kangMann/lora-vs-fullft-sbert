@@ -1,0 +1,4 @@
+model,method,rank,strategy,lr_awal,lr_final,percobaan
+xlm-roberta-base,lora,4,S2,0.001,0.0005,"[(0.001, 0.0371, True), (0.0005, 0.8426, False)]"
+xlm-roberta-base,lora,8,S2,0.0005,0.0003,"[(0.0005, 0.0638, True), (0.0003, 0.8436, False)]"
+xlm-roberta-base,lora,16,S2,0.0005,0.0002,"[(0.0005, 0.4679, True), (0.0003, 0.664, True), (0.0002, 0.8559, False)]"

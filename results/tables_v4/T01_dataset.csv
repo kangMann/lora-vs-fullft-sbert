@@ -1,0 +1,5 @@
+dataset,bahasa,peran,jumlah,label
+STS-B (sentence-transformers/stsb),EN,latih / validasi / uji,5749 / 1500 / 1379,similarity 0–1
+"SemRel2024 (SemRel/SemRel2024, eng)",EN,uji sekunder,2600,relatedness
+STS-B terjemahan (LazarusNLP/stsb_mt_id),ID,uji transfer (tanpa latih),1379,similarity 0–1 (kolom correlation)
+SemRel2024 (ind),ID,uji transfer sekunder,360,relatedness

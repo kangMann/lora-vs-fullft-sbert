@@ -1,0 +1,90 @@
+{
+  "run_id": "xlm-roberta-base_lora-r4_S0_lr0.001_s43_8a248361",
+  "stage": "stability_probe",
+  "config": {
+    "model_name": "xlm-roberta-base",
+    "method": "lora",
+    "rank": 4,
+    "strategy": "S0",
+    "lr": 0.001,
+    "seed": 43,
+    "epochs": 4,
+    "batch_size": 32,
+    "max_len": 128,
+    "warmup_ratio": 0.1,
+    "weight_decay": 0.01,
+    "llrd_decay": 0.9,
+    "lora_dropout": 0.1,
+    "cosent_scale": 20.0,
+    "train_data": "stsb_en",
+    "rslora": false,
+    "lora_targets": "all-linear"
+  },
+  "best_epoch": 4,
+  "val_spearman": 0.837572851654813,
+  "val_pearson": 0.8387523364321241,
+  "diverged": false,
+  "history": [
+    {
+      "epoch": 1,
+      "loss": 0.11585491254097885,
+      "epoch_seconds": 29.485806941986084,
+      "samples_per_s": 194.97516250144596,
+      "val_spearman": 0.7641806886644913,
+      "val_pearson": 0.762581195118236
+    },
+    {
+      "epoch": 2,
+      "loss": 0.043063032544321485,
+      "epoch_seconds": 30.837477207183838,
+      "samples_per_s": 186.42899875936428,
+      "val_spearman": 0.8171929405824518,
+      "val_pearson": 0.818028606430197
+    },
+    {
+      "epoch": 3,
+      "loss": 0.034520882181823254,
+      "epoch_seconds": 31.423146963119507,
+      "samples_per_s": 182.9543045687768,
+      "val_spearman": 0.8291445706020651,
+      "val_pearson": 0.8300837922544738
+    },
+    {
+      "epoch": 4,
+      "loss": 0.029086650090499058,
+      "epoch_seconds": 29.926594495773315,
+      "samples_per_s": 192.1033815194696,
+      "val_spearman": 0.837572851654813,
+      "val_pearson": 0.8387523364321241
+    }
+  ],
+  "trainable_params": 663552,
+  "total_params": 278116608,
+  "peak_gpu_mem_mb": 3830.52001953125,
+  "peak_gpu_mem_reserved_mb": 7444.0,
+  "train_seconds": 121.67302560806274,
+  "wall_seconds": 160.25608921051025,
+  "samples_per_s": 188.99834112842308,
+  "checkpoint_mb": 2.5806570053100586,
+  "precision": "bf16",
+  "resources": {
+    "wall_seconds": 160.25608921051025,
+    "n_samples": 33,
+    "n_sessions": 1,
+    "gpu_util_mean": 31.049284166229526,
+    "gpu_util_max": 92,
+    "power_mean_w": 54.45072449013819,
+    "power_max_w": 71.051,
+    "energy_wh": 2.423905600407917,
+    "temp_max_c": 81,
+    "gpu_mem_used_peak_mb": 8164.875,
+    "proc_ram_peak_mb": 2835.89453125,
+    "sys_ram_used_peak_mb": 5671.33984375
+  },
+  "env": {
+    "torch": "2.11.0+cu130",
+    "transformers": "5.19.0",
+    "peft": "0.21.2",
+    "gpu": "NVIDIA L4"
+  }
+}

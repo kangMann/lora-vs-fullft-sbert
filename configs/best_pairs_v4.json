@@ -1,0 +1,26 @@
+{
+  "xlm-roberta-base": {
+    "full": [
+      "full",
+      0,
+      "S2"
+    ],
+    "lora": [
+      "lora",
+      8,
+      "S2"
+    ]
+  },
+  "roberta-base": {
+    "full": [
+      "full",
+      0,
+      "S2"
+    ],
+    "lora": [
+      "lora",
+      16,
+      "S2"
+    ]
+  }
+}

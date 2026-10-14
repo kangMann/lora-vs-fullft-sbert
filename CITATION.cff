@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this code or these results, please cite the article and this repository."
+title: "LoRA versus Full Fine-Tuning of Sentence-BERT for Semantic Textual Similarity: Code and Results"
+type: software
+version: "1.0.0"
+date-released: "2026-10-13"
+license: MIT
+repository-code: "https://github.com/kangMann/lora-vs-fullft-sbert"   # TODO: replace GITHUB_USERNAME
+# doi: "10.5281/zenodo.XXXXXXX"                                               # TODO: fill in after the Zenodo release
+authors:
+  - family-names: Fitriyandhi
+    given-names: Ari
+    email: a.fitriyandhi@students.amikom.ac.id
+    affiliation: "Universitas Amikom Yogyakarta"
+  - family-names: Marco
+    given-names: Robert
+    affiliation: "Universitas Amikom Yogyakarta"                               # TODO: confirm affiliation
+keywords:
+  - LoRA
+  - Sentence-BERT
+  - semantic textual similarity
+  - parameter-efficient fine-tuning
+  - equivalence testing

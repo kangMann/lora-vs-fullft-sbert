@@ -1,0 +1,23 @@
+{
+  "models": ["xlm-roberta-base", "roberta-base"],
+  "methods": {"full": [0], "lora": [4, 8, 16, 32]},
+  "strategies": {
+    "S0": "cosine-MSE loss",
+    "S1": "cosine-MSE loss + layer-wise LR decay (gamma = 0.9)",
+    "S2": "CoSENT loss (scale = 20)"
+  },
+  "lora": {"alpha": "2 * r", "dropout": 0.1, "target_modules": "all-linear"},
+  "training": {"epochs": 4, "batch_size": 32, "max_len": 128, "optimizer": "AdamW", "weight_decay": 0.01,
+               "warmup_ratio": 0.1, "scheduler": "linear", "grad_clip": 1.0, "precision": "bf16"},
+  "lr_grid_full": [1e-5, 2e-5, 3e-5, 5e-5],
+  "lr_grid_lora": [5e-5, 1e-4, 2e-4, 3e-4, 5e-4, 1e-3],
+  "lr_grid_lora_extra_high": {"4": [2e-3], "8": [2e-3]},
+  "seeds": {"lr_search_and_screening": [42], "stability_probe": [43, 44], "confirmation": [1, 2, 3, 4, 5],
+            "confirmation_extra_best_pair": [6, 7, 8, 9, 10], "ablation": [1, 2, 3]},
+  "ablation": {"rslora_ranks": [16, 32], "qv_only_ranks": [8, 16]},
+  "statistics": {"equivalence_margin_delta": 0.01, "alpha": 0.05, "multiplicity": "Holm",
+                 "bootstrap_resamples": {"per_rank": 2000, "best_pair": 10000},
+                 "max_collapse_rate_for_best": 0.20},
+  "collapse_criteria": "see src/sts_lora_lib.py (is_diverged) and the manuscript, Section III",
+  "expected_gpu": "NVIDIA L4"
+}

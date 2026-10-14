@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+venv/
+# model weights and raw predictions stay on Drive / Zenodo
+*.pt
+*.pth
+*.safetensors
+*.npy
+.DS_Store
